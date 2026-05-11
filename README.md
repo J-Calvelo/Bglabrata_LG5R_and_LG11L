@@ -1,4 +1,27 @@
-# Annotation-Biomphalaria-sudanica
+## Identification and re-annotation of regions associated with resistance against Schistosoma mansoni in Biomphalaria glabrata
 This repository contains the in-house scripts utilized for the publication [XXXXXX]
-The goal was to identify, locate and re-annotate across multiple genomes of the species Biomphalaria glabrata 2 regions associated with 
+The goal was to identify, locate and re-annotate across multiple genomes of the species *Biomphalaria glabrata* 2 new regions associated with resistance against *Schistosoma mansoni*. While designed with re-usability in mind, adapting the scrips to work in a different set up might prove challenging as many design desissions respond to local system architecture. For example many analysis are not run directly but instead the script generates input files to be uploaded into a cluster to run in paralel. 
+
+We will provide assistance upon request.
+
+### - Main_Script.sh
+In short, first the region of interest must be defined in one reference assembly defined by the user. Then all assemblies are scaffolded relative to each of the reference genomes using RagTag (https://github.com/malonge/RagTag) and and annotation transfered to them by using Liftoff (https://github.com/agshumate/Liftoff). In paralel large scale alterations affecting the regions of interest are evaluated by synteny block conservation through Syri (https://github.com/schneebergerlab/syri). The researcher then needs to define the definitive location of their region of interest: 1) The transfered on locations that are expected to be part of the region; and 2) Syri's synteny blocks containing the region. Then Prepare a different input table that contains the exact coordinates to include for each assembly.
+
+The script uses the same reference for scaffolding as the genome assembly where the region is defined, but at the end of this stage this one can be switched for a different one for one or more assemblies if deemed beneficial. Including various fragments of the same region is supported by the script, but caution is advised.  
+
+Next (or in paralel) the reference proteins need to be re-annotated using Interproscan (https://www.ebi.ac.uk/interpro/about/interproscan/), Signalp (https://services.healthtech.dtu.dk/services/SignalP-6.0/), tmhmm (https://services.healthtech.dtu.dk/services/TMHMM-2.0) and TargetP (https://services.healthtech.dtu.dk/services/TargetP-2.0/). The latter could not be installed in our systems for reasons beyond our control, so instead the script utilizes Seqkit (https://bioinf.shenwei.me/seqkit/) to prepare intput files for their web service. Then a separate code block sorts the output to be used for the rest of the pipeline by merging all input tables and adding Gene IDs to each result.
+
+Lastly, the script retrieves and sorts out all available information for the genes located in the region, according to each annotation.
+
+### - Gene_Model_Re-annotation.sh
+This script takes the results of the main script, sorts genes into gene models or groups following a table provided by the user, and then runs interproscan to produce json files for visual inspection. 
+
+### - Structural_Variant_Analysis.sh
+This script aligns query a
+
+
+### - Other code quirks
+1) Liftoff proved hard to paralelize, and with references to use for both scaffolding and annotation transfers, this proved prohibitively time consuming (1 query assembly translates into 16 annotation transfers). Our incomplete work arround was to have 5 copies of each genome sequence file and annotation and stagger their use so not two files are used at the same time. On its current implementation the problem still persist in a low frequency, but the solution is to just try again. 
+
+
 
