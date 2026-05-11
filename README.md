@@ -4,7 +4,8 @@ The goal was to identify, locate and re-annotate across multiple genomes of the 
 
 We will provide assistance upon request.
 
-### - Main_Script.sh
+## BASH scripts
+### Main_Script.sh
 In short, first the region of interest must be defined in one reference assembly defined by the user. Then all assemblies are scaffolded relative to each of the reference genomes using RagTag (https://github.com/malonge/RagTag) and and annotation transfered to them by using Liftoff (https://github.com/agshumate/Liftoff). In paralel large scale alterations affecting the regions of interest are evaluated by synteny block conservation through Syri (https://github.com/schneebergerlab/syri). The researcher then needs to define the definitive location of their region of interest: 1) The transfered on locations that are expected to be part of the region; and 2) Syri's synteny blocks containing the region. Then Prepare a different input table that contains the exact coordinates to include for each assembly.
 
 The script uses the same reference for scaffolding as the genome assembly where the region is defined, but at the end of this stage this one can be switched for a different one for one or more assemblies if deemed beneficial. Including various fragments of the same region is supported by the script, but caution is advised.  
@@ -13,15 +14,19 @@ Next (or in paralel) the reference proteins need to be re-annotated using Interp
 
 Lastly, the script retrieves and sorts out all available information for the genes located in the region, according to each annotation.
 
-### - Gene_Model_Re-annotation.sh
+### Gene_Model_Re-annotation.sh
 This script takes the results of the main script, sorts genes into gene models or groups following a table provided by the user, and then runs interproscan to produce json files for visual inspection. 
 
-### - Structural_Variant_Analysis.sh
-This script aligns query a
+### Structural_Variant_Analysis.sh
+This script various genomes and defines variants with Minimap2 and paftools.js call, then it preditcs their physiological impact according to each of the annotations transfered to the reference assembly using SnpEFF (https://pcingola.github.io/SnpEff/). Then the script sorts them out and count them using 2 tables provided by the user: 1) Gene Models IDs (same as Gene_Model_Re-annotation.sh), a
+2) A Table specifying the gene groups that should be analyzed toguether.
 
+Because of the high complexity of potential overlapping gene models caused by artifacts from the annotation transfers plus real overlapping genes. The researcher is required to review the Raw counts and set on these cases if the variant is going to be counted by one of the gene models, both or neither. While daunting on the surface given the files size, in our expirience working on these regions this is only necesary on very concrete places.  
 
-### - Other code quirks
-1) Liftoff proved hard to paralelize, and with references to use for both scaffolding and annotation transfers, this proved prohibitively time consuming (1 query assembly translates into 16 annotation transfers). Our incomplete work arround was to have 5 copies of each genome sequence file and annotation and stagger their use so not two files are used at the same time. On its current implementation the problem still persist in a low frequency, but the solution is to just try again. 
+### Other code quirks
+1) Liftoff proved hard to paralelize, and with references to use for both scaffolding and annotation transfers, this proved prohibitively time consuming (1 query assembly translates into 16 annotation transfers). Our incomplete work arround was to have 5 copies of each genome sequence file and annotation and stagger their use so not two files are used at the same time. On its current implementation the problem still persist in a low frequency, but the solution is to just try again.
+
+3) For the purposes of variants counts belonging to one group or another (script Structural_Variant_Analysis.sh), a lot of internal back and forth took place if it was better to use a flat number or a percentage of the group size. To accomodate the script takes on both. If the value provided is bellow 1 it will be treated as a percentage, above 1 it will be a set threshold. Please do not provide a float number bigger than 1.
 
 
 
