@@ -1,0 +1,15 @@
+ID	Group	Genome_File	Annotation_File	Prot_File
+F6RR	Q	/nfs6/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio/BS90_F6RR_NCBI/BS90_F6RR_assembly.fasta	NA	NA
+FRS11	Q	/nfs6/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio_II_BS90_FRS11/flye/5305/results/flye/BS90_FRS11_5305/assembly.fasta	NA	NA
+FSS5	Q	/nfs6/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio_II_BS90_FSS5/flye/raw_451/results/flye/BS90_FSS5_PB451/assembly.fasta	NA	NA
+BS90_bu_et_al_qtl	R	/nfs3/IB/Blouin_Lab/data/biomphalaria/bu_et_al_qtl/JAKZJK01.fas	/nfs6/IB/Blouin_Lab/users/javierc/data/biomphalaria/GCA_025434165.1_ASM2543416v1_genomic.gff	/nfs6/IB/Blouin_Lab/users/javierc/data/biomphalaria/GCA_025434165.1_ASM2543416v1_protein.faa
+Mline-T0-S2	Q	/nfs6/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio/Mline-T0-S2.fasta	NA	NA
+M-T0-S2aS2a	Q	/nfs6/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio_II_M-T0-S2aS2a/flye/raw_443/results/flye/M-T0-S2aS2a_PB443/assembly.fasta	NA	NA
+iM-T0-H12_2B_3D8_4	Q	/nfs6/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio_II_iM/flye/5307/results/flye/iM_5307/assembly.fasta	NA	NA
+1316_R_i68_A	Q	/nfs6/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio/1316_R_i68_1st_genome.fasta	NA	NA
+1316_R_i36_B	Q	/nfs6/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio/1316_R_i36_2nd_genome.fasta	NA	NA
+1316_S1_i90	Q	/nfs6/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio/1316_S1_i90_genome.fasta	NA	NA
+1316_S2_i171	Q	/nfs6/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio/1316_S2_i171_new.fasta	NA	NA
+iM_bu_et_al_qtl	R	/nfs6/IB/Blouin_Lab/users/javierc/data/biomphalaria/GCA_025434175.1_ASM2543417v1_genomic.fna	/nfs6/IB/Blouin_Lab/users/javierc/data/biomphalaria/GCA_025434175.1_ASM2543417v1_genomic.gff	/nfs6/IB/Blouin_Lab/users/javierc/data/biomphalaria/GCA_025434175.1_ASM2543417v1_protein.faa
+iM_Zhang_2024	R	/nfs3/IB/Blouin_Lab/data/biomphalaria/bg_genome/Zhong2024/GCA_025434175.2_UNM_BgiM_2.0_genomic.fna	/nfs3/IB/Blouin_Lab/data/biomphalaria/bg_genome/Zhong2024/genomic.gff	/nfs3/IB/Blouin_Lab/data/biomphalaria/bg_genome/Zhong2024/protein.faa
+Bg_2024	R	/nfs3/IB/Blouin_Lab/data/biomphalaria/bg_genome/BioGlab47/GCF_947242115.1_xgBioGlab47.1_genomic.fna	/nfs3/IB/Blouin_Lab/data/biomphalaria/bg_genome/BioGlab47/genomic.gff	/nfs3/IB/Blouin_Lab/data/biomphalaria/bg_genome/BioGlab47/protein.faa
