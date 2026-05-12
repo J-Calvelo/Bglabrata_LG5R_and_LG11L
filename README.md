@@ -42,8 +42,4 @@ Because of the high complexity of potential overlapping gene models caused by ar
 5) While the main script has code to detect some common errors in the input files, the checks are not exhaustive. If an error message recomends an audiodrama, that's your most likely issue.
 
 ## R scripts
-The R scripts here are less flexible, they take a specific set of input files and generate the raw plots used in the main publication. Several of which were lated modified with inkscape for aesthetic purposes only (eg: label size and alignment, line color changes, additional annotations, etc.)
-
-
-4) If the error message mentions certain audio drama, something went terrible wrong with the input files.
-
+The R script R_plots.R generates the raw plots used in the publication, and several exploratory ones. They do not include the final modifications carried out on inkscape for final touches (i.e. fonts sizes, label alignment, and additional notes)
