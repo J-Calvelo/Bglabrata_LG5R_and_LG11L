@@ -1,0 +1,3 @@
+ReferenceID	RegionID	Chr	Start	End	Gene_Model_ID
+iM_Zhang_2024	Albino_Light	CM074214.1	34888123	37105457	Color_Locus
+BS90_bu_et_al_qtl	Pigmented_Ligth	JAKZJK010000042.1	5434737	7905911	Color_Locus

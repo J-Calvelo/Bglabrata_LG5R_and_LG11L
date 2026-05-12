@@ -1,0 +1,2 @@
+ReferenceID	RegionID	Chr	Start	End	
+BS90_bu_et_al_qtl	LG10_Left__BS90_bu_et_al_qtl	JAKZJK010000019.1	669650	2851459

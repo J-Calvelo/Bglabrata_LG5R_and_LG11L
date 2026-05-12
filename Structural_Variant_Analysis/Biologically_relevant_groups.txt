@@ -1,0 +1,4 @@
+RegionID	ReferenceID	S	R	CountID	Threshold
+LG10_Left__Bg_2024	Bg_2024	1316_i36b;1316_i46	1316_S1_i90;1316_S2_i171;1316_R_i68_A	LG10_Left__Bg_2024	2
+LG10_Left__BS90_bu_et_al_qtl	BS90_bu_et_al_qtl	1316_i36b;1316_i46	1316_S1_i90;1316_S2_i171;1316_R_i68_A	LG10_Left__BS90_bu_et_al_qtl	2
+LG5_Right	iM_Zhang_2024	1316_S1_i90;1316_S2_i171;1316_i36b	1316_i46;1316_R_i68_A	LG5_Right	2

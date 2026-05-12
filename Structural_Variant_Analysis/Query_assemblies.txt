@@ -1,0 +1,16 @@
+AssemblyID	Genome_Path
+F6RR	/nfs5/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio/BS90_F6RR_NCBI/BS90_F6RR_assembly.fasta
+FRS11	/nfs5/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio_II_BS90_FRS11/flye/5305/results/flye/BS90_FRS11_5305/assembly.fasta
+FSS5	/nfs5/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio_II_BS90_FSS5/flye/raw_451/results/flye/BS90_FSS5_PB451/assembly.fasta
+Mline-T0-S2	/nfs5/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio/Mline-T0-S2.fasta
+M-T0-S2aS2a	/nfs5/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio_II_M-T0-S2aS2a/flye/raw_443/results/flye/M-T0-S2aS2a_PB443/assembly.fasta
+iM-T0-H12_2B_3D8_4	/nfs5/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio_II_iM/flye/5307/results/flye/iM_5307/assembly.fasta
+1316_R_i68_A	/nfs5/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio/1316_R_i68_1st_genome.fasta
+1316_R_i36_B	/nfs5/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio/1316_R_i36_2nd_genome.fasta
+1316_S1_i90	/nfs5/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio/1316_S1_i90_genome.fasta
+1316_S2_i171	/nfs5/IB/Blouin_Lab/users/stephanie/data/biomphalaria/pacbio/1316_S2_i171_new.fasta
+GUA	/nfs5/IB/Blouin_Lab/users/javierc/data/Suspected_GUA/Bs151.2.fasta
+BgBAR_R1	/nfs5/IB/Blouin_Lab/users/javierc/ANALYSIS/De_Novo_Prediction_BS90_Seun/New_Genomes/BgBAR_R1_contigs.fasta 
+BgBAR_S2	/nfs5/IB/Blouin_Lab/users/javierc/ANALYSIS/De_Novo_Prediction_BS90_Seun/New_Genomes/BgBAR_S2_contigs.fasta
+1316_i36b	/nfs5/IB/Blouin_Lab/users/javierc/ANALYSIS/Key_Region_Anotation/Backpup_Annotation_Runs/1316_i36b_p_contigs.fasta
+1316_i46	/nfs5/IB/Blouin_Lab/users/javierc/ANALYSIS/Key_Region_Anotation/Backpup_Annotation_Runs/1316_i46_p_contigs.fasta

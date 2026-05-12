@@ -1,0 +1,5 @@
+AssemblyID	Genome_Path
+BS90_bu_et_al_qtl	/nfs3/IB/Blouin_Lab/data/biomphalaria/bu_et_al_qtl/JAKZJK01.fas
+iM_bu_et_al_qtl	/nfs6/IB/Blouin_Lab/users/javierc/data/biomphalaria/GCA_025434175.1_ASM2543417v1_genomic.fna
+iM_Zhang_2024	/nfs3/IB/Blouin_Lab/data/biomphalaria/bg_genome/Zhong2024/GCA_025434175.2_UNM_BgiM_2.0_genomic.fna
+Bg_2024	/nfs3/IB/Blouin_Lab/data/biomphalaria/bg_genome/BioGlab47/GCF_947242115.1_xgBioGlab47.1_genomic.fna

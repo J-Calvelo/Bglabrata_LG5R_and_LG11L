@@ -1,0 +1,4 @@
+AssemblyID	Genome_Path
+Bg_2024	/nfs5/IB/Blouin_Lab/users/javierc/ANALYSIS/Key_Region_Anotation/Backpup_Annotation_Runs/Bg_2024_genome.fasta
+BS90_bu_et_al_qtl	/nfs5/IB/Blouin_Lab/users/javierc/ANALYSIS/Key_Region_Anotation/Backpup_Annotation_Runs/BS90_bu_et_al_qtl_genome.fasta
+iM_Zhang_2024	/nfs5/IB/Blouin_Lab/users/javierc/ANALYSIS/Key_Region_Anotation/Backpup_Annotation_Runs/iM_Zhang_2024_genome.fasta
