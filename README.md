@@ -22,6 +22,9 @@ This script takes the results of the main script, sorts genes into gene models o
 ### Dotplot_Analysis_1.sh and Dotplot_Analysis_2.sh
 The first script takes the table with the refined region coordinates and orientation and extracts the sequences for latter use by other tools. In our analysis we used D-genies for an initial exploration of the region and quickly evaluate what reference was better suited for the final reconstruction of the region. The second script takes all sequnces in a folder and runs Blastn2dotplots (https://github.com/mokuno3430/blastn2dotplots) through all combinations. Highlights can be added to a single tab files that is parsed bu the script.
 
+### TM_density_tables.sh
+This scrips measures concentrations of TM1 genes across one of the reference genomes based on it's original annotation and the transfers from all others. In addition to a simple TM count, the script checks if there is an overlap between a predicted SP/mTP, and a TM domain, defaulting to the former if so. The script has to modules, one for gathering data and another to count genes in a sliding window.
+
 ### Structural_Variant_Analysis.sh
 This script various genomes and defines variants with Minimap2 and paftools.js call, then it preditcs their physiological impact according to each of the annotations transfered to the reference assembly using SnpEFF (https://pcingola.github.io/SnpEff/). Then the script sorts them out and count them using 2 tables provided by the user: 1) Gene Models IDs (same as Gene_Model_Re-annotation.sh), and 2) a table specifying the gene groups that should be analyzed together on what analysis and what is the treshold for counting variants asigned to each group.
 
@@ -34,6 +37,9 @@ Because of the high complexity of potential overlapping gene models caused by ar
 
 3) At many points the script uses dummy IDs to start working. Please be reasonable with file names and gene IDs and avoid names like "REMOVE_ME_", "\_ooo\_" and other strange combinations that no reasonable creature should use as IDs if they are not trying to break my script.
 
+4) Many minor scripts rely on output from the main script, and their location needs to be specified before running.
+   
+5) While the main script has code to detect some common errors in the input files, the checks are not exhaustive. If an error message recomends an audiodrama, that's your most likely issue.
 
 ## R scripts
 The R scripts here are less flexible, they take a specific set of input files and generate the raw plots used in the main publication. Several of which were lated modified with inkscape for aesthetic purposes only (eg: label size and alignment, line color changes, additional annotations, etc.)
