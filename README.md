@@ -17,13 +17,11 @@ Lastly, the script retrieves and sorts out all available information for the gen
 ### Gene_Model_Re-annotation.sh
 This script takes the results of the main script, sorts genes into gene models or groups following a table provided by the user, and then runs interproscan to produce json files for visual inspection. 
 
-# Utility_blastn2dotplots.sh
-# Utility_final_raw_gene_signatures.sh
-
+### Dotplot_Analysis_1.sh and Dotplot_Analysis_2.sh
+The first script takes the table with the refined region coordinates and orientation and extracts the sequences for latter use by other tools. In our analysis we used D-genies for an initial exploration of the region and quickly evaluate what reference was better suited for the final reconstruction of the region. The second script takes all sequnces in a folder and runs Blastn2dotplots (https://github.com/mokuno3430/blastn2dotplots) through all combinations. Highlights can be added to a single tab files that is parsed bu the script.
 
 ### Structural_Variant_Analysis.sh
-This script various genomes and defines variants with Minimap2 and paftools.js call, then it preditcs their physiological impact according to each of the annotations transfered to the reference assembly using SnpEFF (https://pcingola.github.io/SnpEff/). Then the script sorts them out and count them using 2 tables provided by the user: 1) Gene Models IDs (same as Gene_Model_Re-annotation.sh), a
-2) a table specifying the gene groups that should be analyzed together on what analysis and what is the treshold for counting variants asigned to each group.
+This script various genomes and defines variants with Minimap2 and paftools.js call, then it preditcs their physiological impact according to each of the annotations transfered to the reference assembly using SnpEFF (https://pcingola.github.io/SnpEff/). Then the script sorts them out and count them using 2 tables provided by the user: 1) Gene Models IDs (same as Gene_Model_Re-annotation.sh), and 2) a table specifying the gene groups that should be analyzed together on what analysis and what is the treshold for counting variants asigned to each group.
 
 Because of the high complexity of potential overlapping gene models caused by artifacts from the annotation transfers plus real overlapping genes. The researcher is required to review the Raw counts and set on these cases if the variant is going to be counted by one of the gene models, both or neither. While daunting on the surface given the files size, in our expirience working on these regions this is only necesary on very concrete places.  
 
