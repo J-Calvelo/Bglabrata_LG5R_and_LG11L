@@ -32,5 +32,7 @@ Because of the high complexity of potential overlapping gene models caused by ar
 
 2) For the purposes of variants counts belonging to one group or another (script Structural_Variant_Analysis.sh), a lot of internal back and forth took place if it was better to use a flat number or a percentage of the group size. To accomodate the script takes on both. If the value provided is bellow 1 it will be treated as a percentage, above 1 it will be a set threshold. Please do not provide a float number bigger than 1.
 
+3) At many points the script uses dummy IDs to start working. Please be reasonable with file names and gene IDs and avoid names like "REMOVE_ME_", "_ooo_" and other strange combinations that no reasonable creature should use as IDs if they are not trying to break my script.
 
+4) If the error message mentions certain audio drama, something went terrible wrong with the input files.
 
