@@ -5,6 +5,8 @@ The goal was to identify, locate and re-annotate across multiple genomes of the 
 We will provide assistance upon request.
 
 ## BASH scripts
+The bash scripts control the core analysis and file generation. While large, they are partially modular as several blocks of code can be run, skip or put on hold by setting specific variables (all uppercase) to TRUE or FALSE. Many parameters and file inputs can be adjusted in the same manner by edditing the variables at the start of the script (all minus)
+
 ### Main_Script.sh
 In short, first the region of interest must be defined in one reference assembly defined by the user. Then all assemblies are scaffolded relative to each of the reference genomes using RagTag (https://github.com/malonge/RagTag) and and annotation transfered to them by using Liftoff (https://github.com/agshumate/Liftoff). In paralel large scale alterations affecting the regions of interest are evaluated by synteny block conservation through Syri (https://github.com/schneebergerlab/syri). The researcher then needs to define the definitive location of their region of interest: 1) The transfered on locations that are expected to be part of the region; and 2) Syri's synteny blocks containing the region. Then Prepare a different input table that contains the exact coordinates to include for each assembly.
 
