@@ -34,5 +34,10 @@ Because of the high complexity of potential overlapping gene models caused by ar
 
 3) At many points the script uses dummy IDs to start working. Please be reasonable with file names and gene IDs and avoid names like "REMOVE_ME_", "\_ooo\_" and other strange combinations that no reasonable creature should use as IDs if they are not trying to break my script.
 
+
+## R scripts
+The R scripts here are less flexible, they take a specific set of input files and generate the raw plots used in the main publication. Several of which were lated modified with inkscape for aesthetic purposes only (eg: label size and alignment, line color changes, additional annotations, etc.)
+
+
 4) If the error message mentions certain audio drama, something went terrible wrong with the input files.
 
