@@ -536,8 +536,8 @@ then
     gene_model_IDs=$(awk -F "\t" -v region=$get_regionID '{if ($1==region) print $2}' $gene_model_file | sort -u)
     default_effect_cols=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" | tr "\t" "\n" | grep -n Effect_on_ | awk -F ":" '{print $1}')
 
-    control_sus=$(awk -F "\t" -v region=$region '{if (region == $1) print $3}' $bio_groups_file | tr ";" " ")
-    control_res=$(awk -F "\t" -v region=$region '{if (region == $1) print $4}' $bio_groups_file | tr ";" " ")
+    control_sus=$(awk -F "\t" -v region=$region '{if (region == $5) print $3}' $bio_groups_file | tr ";" " ")
+    control_res=$(awk -F "\t" -v region=$region '{if (region == $5) print $4}' $bio_groups_file | tr ";" " ")
     Nsus=$(echo $control_sus | tr " " "\n" | grep -c .)
     Nres=$(echo $control_res | tr " " "\n" | grep -c .)
 
