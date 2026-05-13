@@ -517,18 +517,18 @@ then
   summarize_regions=$(ls $manual_notes_tables"/"*"_manual_checks.txt" | sed "s/.*\///" | sed "s/_manual_checks.txt//")
   for region in $summarize_regions
   do
-    column_All_Sus=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" | grep -n "Is_All_GrA" | awk -F ":" '{print $1}')
-    column_All_Res=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" | grep -n "Is_All_GrB" | awk -F ":" '{print $1}')
+    column_All_Sus=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" |  tr "\t" "\n" | grep -n "Is_All_GrA" | awk -F ":" '{print $1}')
+    column_All_Res=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" |  tr "\t" "\n" | grep -n "Is_All_GrB" | awk -F ":" '{print $1}')
 
-    count_sus=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" | grep -n "N_GrA_(" | awk -F ":" '{print $1}')
-    count_res=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" | grep -n "N_GrB_(" | awk -F ":" '{print $1}')
+    count_sus=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" |  tr "\t" "\n" | grep -n "N_GrA_(" | awk -F ":" '{print $1}')
+    count_res=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" |  tr "\t" "\n" | grep -n "N_GrB_(" | awk -F ":" '{print $1}')
 
-    NA_sus=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" | grep -n "Num_NA_GrA" | awk -F ":" '{print $1}')
-    NA_res=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" | grep -n "Num_NA_GrB" | awk -F ":" '{print $1}')
+    NA_sus=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" |  tr "\t" "\n" | grep -n "Num_NA_GrA" | awk -F ":" '{print $1}')
+    NA_res=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" |  tr "\t" "\n" | grep -n "Num_NA_GrB" | awk -F ":" '{print $1}')
 
-    hit_ref_sus=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" | grep -n "Num_Ref_hits_GrA" | awk -F ":" '{print $1}')
-    hit_ref_res=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" | grep -n "Num_Ref_hits_GrB" | awk -F ":" '{print $1}')
-    manual_override=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" | grep -n "Manual_Override" | awk -F ":" '{print $1}')
+    hit_ref_sus=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" |  tr "\t" "\n" | grep -n "Num_Ref_hits_GrA" | awk -F ":" '{print $1}')
+    hit_ref_res=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" |  tr "\t" "\n" | grep -n "Num_Ref_hits_GrB" | awk -F ":" '{print $1}')
+    manual_override=$(head -n 1 $manual_notes_tables"/"$region"_manual_checks.txt" |  tr "\t" "\n"  | grep -n "Manual_Override" | awk -F ":" '{print $1}')
 
     echo "Working on: "$region
     echo "Count_Group Gene_Model N_High N_Moderate N_Low N_Modifier" | tr " " "\t" >> $work_directory"/Variation_Density_Mk3/Summary_Tables/"$region"_summary.txt"
