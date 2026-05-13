@@ -546,10 +546,8 @@ then
 
     for model in $gene_model_IDs
     do
-
       echo $model
-      # count_identifier=Sus
-      count_identifier=Pigmented
+      count_identifier=Sus
       if [ $is_fraction == "TRUE" ]
       then
         work_tresh=$( echo $Nsus" "$treshold | awk -F " " '{printf "%.0f\n", $1*$2}')
@@ -559,8 +557,7 @@ then
       grep "("$model"__" $manual_notes_tables"/"$region"_manual_checks.txt" | awk -F "\t" -v treshold=$work_tresh -v check_col=$count_sus -v avoid_col=$count_res -v inner_hits_ref=$hit_ref_sus '{if ($check_col>=treshold && $avoid_col==0 && $inner_hits_ref==0) print}' |   awk -F "\t" -v other_na=$NA_res -v other_hit_ref=$hit_ref_res '{if ($other_na > 1 || $other_hit_ref >1) print}' > $work_directory"/Variation_Density_Mk3/Summary_Tables/Current_hits.tmp"
       make_counts
 
-      # count_identifier=Res
-      count_identifier=Albino
+      count_identifier=Res
       if [ $is_fraction == "TRUE" ]
       then
         work_tresh=$( echo $Nres" "$treshold | awk -F " " '{printf "%.0f\n", $1*$2}')
