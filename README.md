@@ -32,7 +32,7 @@ Because of the high complexity of potential overlapping gene models caused by ar
 
 ### Reciprocal_Blast_Bsudanica.sh
 This script runs a reciprocal blast between the predicted proteins of _B. glabrata_ (NCBI ID: GCF_947242115.1) and B. sudanica (NCBI ID: 
-GCA_036873155.1, annotation in doi: 10.1186/s12864-024-10103-w). The script considers all the annotated isoforms in the initial steps, then sorts them up by gene and then crossreferences the genes described in https://doi.org/10.1038/s41467-025-61760-8 and those located on Chromosome 5 in _B. glabrata_.
+GCA_036873155.1, annotation in doi: 10.1186/s12864-024-10103-w). The script considers all the annotated isoforms in the initial steps, then sorts them up by gene and then crossreferences the genes described in https://doi.org/10.1038/s41467-025-61760-8 and those transfered from GCA_036873155.1 to the B. glabrata M-line reference genome GCA_025434175.2 (Liftoff coverage >= 0.8) on Chromosome 5 (Sequence ID: CM074206.1).
 
 ### Other code quirks
 1) Liftoff proved hard to paralelize, and with 4 references to use for both scaffolding and annotation transfers, this proved prohibitively time consuming (1 query assembly translates into 16 annotation transfers). Our incomplete work arround was to have 5 copies of each genome sequence file and annotation and stagger their use so not two files are used at the same time. On its current implementation the problem still persist in a low frequency, but the solution is to just try again.
