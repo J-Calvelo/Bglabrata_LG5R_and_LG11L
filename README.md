@@ -28,7 +28,11 @@ This scrips measures concentrations of TM1 genes across one of the reference gen
 ### Structural_Variant_Analysis.sh
 This script various genomes and defines variants with Minimap2 and paftools.js call, then it preditcs their physiological impact according to each of the annotations transfered to the reference assembly using SnpEFF (https://pcingola.github.io/SnpEff/). Then the script sorts them out and count them using 2 tables provided by the user: 1) Gene Models IDs (same as Gene_Model_Re-annotation.sh), and 2) a table specifying the gene groups that should be analyzed together on what analysis and what is the treshold for counting variants asigned to each group.
 
-Because of the high complexity of potential overlapping gene models caused by artifacts from the annotation transfers plus real overlapping genes. The researcher is required to review the Raw counts and set on these cases if the variant is going to be counted by one of the gene models, both or neither. While daunting on the surface given the files size, in our expirience working on these regions this is only necesary on very concrete places.  
+Because of the high complexity of potential overlapping gene models caused by artifacts from the annotation transfers plus real overlapping genes. The researcher is required to review the Raw counts and set on these cases if the variant is going to be counted by one of the gene models, both or neither. While daunting on the surface given the files size, in our expirience working on these regions this is only necesary on very concrete places.
+
+### Reciprocal_Blast_Bsudanica.sh
+This script runs a reciprocal blast between the predicted proteins of _B. glabrata_ (NCBI ID: GCF_947242115.1) and B. sudanica (NCBI ID: 
+GCA_036873155.1, annotation in doi: 10.1186/s12864-024-10103-w). The script considers all the annotated isoforms in the initial steps, then sorts them up by gene and then crossreferences the genes described in https://doi.org/10.1038/s41467-025-61760-8 and those located on Chromosome 5 in _B. glabrata_.
 
 ### Other code quirks
 1) Liftoff proved hard to paralelize, and with 4 references to use for both scaffolding and annotation transfers, this proved prohibitively time consuming (1 query assembly translates into 16 annotation transfers). Our incomplete work arround was to have 5 copies of each genome sequence file and annotation and stagger their use so not two files are used at the same time. On its current implementation the problem still persist in a low frequency, but the solution is to just try again.
